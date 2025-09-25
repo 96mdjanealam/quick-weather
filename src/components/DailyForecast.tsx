@@ -1,5 +1,4 @@
 import React from "react";
-import { Calendar } from "lucide-react";
 import type { DailyForecastProps, ForecastItem } from "../types/types";
 import { icons } from "../assets/icons";
 
@@ -66,8 +65,7 @@ const DailyForecast: React.FC<DailyForecastProps> = ({ forecastQuery }) => {
             const dayName = dateObj.toLocaleDateString('en-US', { weekday: 'short' });
             
             return (
-              <div key={index} className="bg-white/10 rounded-lg p-3 text-center flex flex-col items-center">
-                
+              <div key={index} className="bg-white/10 rounded-lg p-3 text-center flex flex-col items-center">                
                 <div className="text-sm font-medium mb-1">{dayName}</div>
                 <div className="py-2">
                   {getWeatherIcon(firstForecast.weather[0].icon)}
@@ -81,13 +79,6 @@ const DailyForecast: React.FC<DailyForecastProps> = ({ forecastQuery }) => {
               </div>
             );
           })}
-        </div>
-      )}
-
-      {!forecastQuery.data && !forecastQuery.isLoading && !forecastQuery.error && (
-        <div className="text-center py-4">
-          <Calendar className="text-gray-300 mx-auto mb-2" size={24} />
-          <p className="text-sm">Daily forecast will appear here</p>
         </div>
       )}
     </div>

@@ -87,6 +87,11 @@ const CurrentWeather: React.FC<CurrentWeatherProps> = ({
               <div className="text-sm text-white/80">Feels Like</div>
               <div className="text-xl">
                 {Math.round(currentQuery.data.main.feels_like)}°
+                {selected === "metric"
+                  ? "C"
+                  : selected === "imperial"
+                  ? "F"
+                  : "K"}
               </div>
             </div>
             <div className="bg-white/10 rounded-lg p-3">
@@ -101,9 +106,9 @@ const CurrentWeather: React.FC<CurrentWeatherProps> = ({
               </div>
             </div>
             <div className="bg-white/10 rounded-lg p-3">
-              <div className="text-sm text-white/80">Max temperature</div>
+              <div className="text-sm text-white/80">Pressure</div>
               <div className="text-xl">
-                {Math.round(currentQuery.data.main.temp_max)}°
+                {Math.round(currentQuery.data.main.pressure)} hPa
               </div>
             </div>
           </div>

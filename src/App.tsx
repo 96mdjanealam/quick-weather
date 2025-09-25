@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ChevronRight, Search, Sun } from "lucide-react";
 import CurrentWeather from "./components/CurrentWeather";
 import HourlyForecast from "./components/HourlyForecast";
@@ -34,6 +34,13 @@ function App() {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
   };
+
+  useEffect(() => {
+    if (searchCity && currentQuery.isSuccess && forecastQuery.isSuccess) {
+      setInputValue("");
+    }
+  }, [currentQuery.isSuccess, forecastQuery.isSuccess, searchCity]);
+
 
   return (
     <div className="mx-auto min-h-dvh bg-[linear-gradient(-45deg,#1E1B4B,#581C87,#1E1B4B)] text-white py-8">
