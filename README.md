@@ -1,73 +1,113 @@
-# React + TypeScript + Vite
+# Quick Weather
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive weather application built with React 19, TypeScript, and Tailwind CSS. This application provides real-time weather information with an intuitive user interface and smooth performance.
 
-Currently, two official plugins are available:
+Visit [https://quick-weather-puce.vercel.app](https://quick-weather-puce.vercel.app) to see the live site.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
 
-## React Compiler
+- **Real-time Weather Data**: Fetches current weather conditions, forecasts, and detailed weather information
+- **Responsive Design**: Works seamlessly across desktop, tablet, and mobile devices
+- **Modern UI**: Clean, intuitive interface built with Tailwind CSS
+- **Fast Performance**: Optimized with React Query for efficient data fetching and caching
+- **Type Safety**: Built with TypeScript for enhanced code reliability
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend**: React 19
+- **Styling**: Tailwind CSS v4
+- **State Management**: React Query (TanStack Query)
+- **Icons**: Lucide React
+- **Type Safety**: TypeScript
+- **Build Tool**: Vite
+- **Linting**: ESLint
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📋 Dependencies
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- `react` & `react-dom` - v19.1.1
+- `@tailwindcss/vite` & `tailwindcss` - v4.1.13
+- `@tanstack/react-query` - v5.90.2
+- `lucide-react` - v0.544.0
+- `typescript` - v5.8.3
+- `vite` - v7.1.7
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🚀 Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/96mdjanealam/quick-weather.git
+   cd weather-app
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Environment Variables**
+   Create a `.env.local` file in the root directory and add your weather API key:
+   ```env
+   VITE_WEATHER_API_KEY=your_api_key_here
+   VITE_BASE_URL=https://api.openweathermap.org/data/2.5
+   ```
+
+4. **Start the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+5. **Open your browser**
+   Visit [http://localhost:5173](http://localhost:5173) to see the application
+
+### Available Scripts
+
+- `npm run dev` - Start the development server
+- `npm run build` - Build the application for production
+- `npm run preview` - Preview the production build locally
+- `npm run lint` - Run ESLint to check for code issues
+
+## 🗂️ Project Structure
+
+```
+src/
+├── components/    # Reusable UI components
+├── hooks/         # Custom React hooks
+├── types/         # TypeScript type definitions
+└── assets/        # Static assets (images, icons)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎨 UI Components
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Weather Cards**: Display current weather conditions
+- **Forecast Grid**: Show 5-day weather forecast
+- **Search Functionality**: Search by city name
+- **Responsive Layout**: Adapts to different screen sizes
+- **Loading States**: Smooth loading indicators
+- **Error Handling**: User-friendly error messages
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🔧 API Integration
+
+This application integrates with a weather API (such as OpenWeatherMap) to fetch real-time weather data. The API key should be configured in the environment variables.
+
+## 🙏 Acknowledgments
+
+- [React](https://react.dev/) - Modern JavaScript library for building user interfaces
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [TanStack Query](https://tanstack.com/query) - Powerful data fetching and state management
+- [Lucide](https://lucide.dev/) - Beautiful, pixel-perfect icons
+- [Vite](https://vitejs.dev/) - Next generation frontend tooling
+
+---
+
+**Built with ❤️ using React 19 and TypeScript**
