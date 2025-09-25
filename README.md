@@ -90,7 +90,7 @@ src/
 ## 🎨 UI Components
 
 - **Weather Cards**: Display current weather conditions
-- **Forecast Grid**: Show 5-day weather forecast
+- **Forecast Grid**: Show weather forecast for weekdays
 - **Search Functionality**: Search by city name
 - **Responsive Layout**: Adapts to different screen sizes
 - **Loading States**: Smooth loading indicators
