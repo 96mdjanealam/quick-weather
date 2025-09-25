@@ -147,7 +147,7 @@ function App() {
               </div>
             ) : currentQuery.isError || forecastQuery.isError ? (
               <div className="mt-10 text-center">
-                <p>Data not found! Try again!</p>
+                <p>Data not found! Try with a valid city/place name.</p>
               </div>
             ) : (
               <div className="mt-10 text-center">
